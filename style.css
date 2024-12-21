@@ -1,0 +1,116 @@
+
+body {
+    font-family: "IBM Plex Sans Arabic", sans-serif;
+    color: #fff;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-image: url('images/_a snowy day and homes are around   and the center is empty closer to us.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+    width: 100%;
+}
+
+/* عنوان و امتیاز */
+h1, .score {
+    font-size: 5vw;  /* اندازه فونت بر اساس عرض صفحه */
+}
+
+/* دانه‌های برف */
+#snowflakes {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* جلوگیری از تداخل با تعاملات کاربر */
+    z-index: 0;
+}
+
+.snowflake {
+    position: absolute;
+    background-color: white;
+    border-radius: 50%;
+    opacity: 0.8;
+    animation: fall 10s linear infinite;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-50px);
+    }
+    100% {
+        transform: translateY(100vh);
+    }
+}
+
+/* تنظیمات عمومی ابرها */
+#clouds {
+    position: absolute;
+    top: 10%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.cloud {
+    position: absolute;
+    background-image: url('images/cloud-303181_1280.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.8;
+    width: 150px;
+    height: 75px;
+    animation: moveClouds 30s linear infinite;
+}
+
+@keyframes moveClouds {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/* تنظیمات مربوط به canvas */
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    border: 3px solid #fff;
+    margin: 0;
+    background-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+/* استایل‌های عمومی */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+/* اندازه فونت‌های عمومی */
+h1, .score {
+    font-size: 30px;
+}

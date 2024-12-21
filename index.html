@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>بازی شب یلدا</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+<body>
+
+    <audio id="backgroundMusic" loop>
+        <source src="sounds/Akam Band - Yalda (128).mp3" type="audio/mp3">
+      </audio>
+      
+    <h1>بازی شب یلدا</h1>
+    <p class="score">امتیاز: <span id="score">0</span></p>
+    <h2>هنرستان سمپاد سعدی</h2>
+    <h3>یلدا مبارک</h3>
+
+
+    <canvas id="gameCanvas" width="600" height="400"></canvas>
+
+    <div id="snowflakes"></div>
+    <div id="clouds"></div>
+
+    <!-- لینک به اسکریپت‌های بازی -->
+    <script src="game.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.0/gsap.min.js"></script>
+</body>
+</html>
